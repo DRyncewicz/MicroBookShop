@@ -1,18 +1,19 @@
 ﻿using MicroBookShop.Services.CouponAPI.Application.Abstract.Services;
+using MicroBookShop.Services.CouponAPI.Domain.Entities;
 using MicroBookShop.Services.CouponAPI.Domain.Entities.Common;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Reflection;
 
 namespace MicroBookShop.Services.CouponAPI.Infrastructure.Context;
 
-public class CouponDbContext : DbContext
+public class ApplicationDbContext : DbContext
 {
-    public CouponDbContext(DbContextOptions<CouponDbContext> options) : base(options)
+    public ApplicationDbContext(DbContextOptions options)
+: base(options)
     {
     }
 
-    public CouponDbContext(DbContextOptions<CouponDbContext> options, IDateTime dateTime, ICurrentUserService userService) : base(options)
+    public ApplicationDbContext(DbContextOptions options, IDateTime dateTime, ICurrentUserService userService) : base(options)
     {
         _dateTime = dateTime;
         _UserService = userService;
@@ -21,6 +22,8 @@ public class CouponDbContext : DbContext
     private readonly IDateTime _dateTime;
 
     private readonly ICurrentUserService _UserService;
+
+    public DbSet<Coupon> Coupons { get; set; }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
     {

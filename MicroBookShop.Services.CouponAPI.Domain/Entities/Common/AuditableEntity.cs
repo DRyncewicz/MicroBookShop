@@ -13,13 +13,13 @@
 
         public string? EditedBy { get; set; }
 
-        public DateTime EditedAt { get; set; }
+        public DateTime? EditedAt { get; set; }
 
         public bool? IsDeleted { get; set; }
 
         public string? DeletedBy { get; set; }
 
-        public DateTime DeletedAt { get; set; }
+        public DateTime? DeletedAt { get; set; }
 
         public int StatusId { get; set; } 
     }
