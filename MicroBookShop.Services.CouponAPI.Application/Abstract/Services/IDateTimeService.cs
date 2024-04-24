@@ -1,6 +1,6 @@
 ﻿namespace MicroBookShop.Services.CouponAPI.Application.Abstract.Services;
 
-public interface IDateTime
+public interface IDateTimeService
 {
     DateTime Now { get; }
 }

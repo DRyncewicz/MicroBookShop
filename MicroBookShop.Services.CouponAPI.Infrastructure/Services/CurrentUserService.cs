@@ -12,8 +12,9 @@ public class CurrentUserService : ICurrentUserService
 
     public CurrentUserService(IHttpContextAccessor httpContextAccessor)
     {
-        var userId = httpContextAccessor.HttpContext?.User?.FindFirst(JwtClaimTypes.Id).Value;
-
+        //TODO Uncomment when auth service will be ready
+        //var userId = httpContextAccessor.HttpContext?.User?.FindFirst(JwtClaimTypes.Id).Value;
+        var userId = "AdminTests";
         UserId = userId;
 
         IsAuthenticated = !string.IsNullOrEmpty(userId);

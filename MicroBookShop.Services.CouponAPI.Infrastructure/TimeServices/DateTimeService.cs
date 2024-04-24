@@ -2,7 +2,7 @@
 
 namespace MicroBookShop.Services.CouponAPI.Infrastructure.TimeServices;
 
-public class DateTimeService : IDateTime
+public class DateTimeService : IDateTimeService
 {
     public DateTime Now => DateTime.Now;
 }

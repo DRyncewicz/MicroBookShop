@@ -7,15 +7,14 @@ public class CouponRepository(IBaseRepository _baseRepository) : ICouponReposito
 {
     private readonly IBaseRepository _baseRepository = _baseRepository;
 
-    public async Task<int> CreateAsync(Coupon coupon, CancellationToken ct)
+    public async Task<int> CreateAsync(Coupon coupon, CancellationToken ct = default)
     {
         await _baseRepository.AddAsync(coupon, ct);
-        var id = await _baseRepository.SaveAsync(ct);
 
-        return id;
+        return await _baseRepository.SaveAsync(ct);
     }
 
-    public async Task<IEnumerable<Coupon>> GetAllAsync(CancellationToken ct)
+    public async Task<IEnumerable<Coupon>> GetAllAsync(CancellationToken ct = default)
     {
         return _baseRepository.GetAll<Coupon>(); 
     }

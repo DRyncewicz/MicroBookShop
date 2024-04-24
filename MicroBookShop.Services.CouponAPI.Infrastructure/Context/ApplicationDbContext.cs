@@ -1,25 +1,26 @@
 ﻿using MicroBookShop.Services.CouponAPI.Application.Abstract.Services;
 using MicroBookShop.Services.CouponAPI.Domain.Entities;
 using MicroBookShop.Services.CouponAPI.Domain.Entities.Common;
+using MicroBookShop.Services.CouponAPI.Infrastructure.Abstract;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 namespace MicroBookShop.Services.CouponAPI.Infrastructure.Context;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : DbContext, IApplicationDbContext
 {
     public ApplicationDbContext(DbContextOptions options)
 : base(options)
     {
     }
 
-    public ApplicationDbContext(DbContextOptions options, IDateTime dateTime, ICurrentUserService userService) : base(options)
+    public ApplicationDbContext(DbContextOptions options, IDateTimeService dateTime, ICurrentUserService userService) : base(options)
     {
         _dateTime = dateTime;
         _UserService = userService;
     }
 
-    private readonly IDateTime _dateTime;
+    private readonly IDateTimeService _dateTime;
 
     private readonly ICurrentUserService _UserService;
 
