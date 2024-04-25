@@ -10,7 +10,6 @@ public class CouponRepository(IBaseRepository _baseRepository) : ICouponReposito
     public async Task<int> CreateAsync(Coupon coupon, CancellationToken ct = default)
     {
         await _baseRepository.AddAsync(coupon, ct);
-
         return await _baseRepository.SaveAsync(ct);
     }
 

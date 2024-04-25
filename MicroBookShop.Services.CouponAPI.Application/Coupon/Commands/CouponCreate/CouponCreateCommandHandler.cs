@@ -13,10 +13,7 @@ namespace MicroBookShop.Services.CouponAPI.Application.Coupon.Commands.CouponCre
         public async Task<int> Handle(CouponCreateCommand request, CancellationToken cancellationToken)
         {
             var coupon = _mapper.Map<Domain.Entities.Coupon>(request);
-            var coupons = await _couponRepository.GetAllAsync(cancellationToken);
-            var test =  await _couponRepository.CreateAsync(coupon, cancellationToken);
-
-            return 1;
+            return  await _couponRepository.CreateAsync(coupon, cancellationToken);
         }
     }
 }

@@ -1,11 +1,12 @@
 ﻿using MicroBookShop.Services.CouponAPI.Application.Abstract.Repositories;
 using MicroBookShop.Services.CouponAPI.Infrastructure.Abstract;
+using MicroBookShop.Services.CouponAPI.Infrastructure.Context;
 
 namespace MicroBookShop.Services.CouponAPI.Infrastructure.Repositories.Common;
 
-public class BaseRepository(IApplicationDbContext _dbContext) : IBaseRepository
+public class BaseRepository(ApplicationDbContext _dbContext) : IBaseRepository
 {
-    private readonly IApplicationDbContext _dbContext = _dbContext;
+    private readonly ApplicationDbContext _dbContext = _dbContext;
 
     public async Task AddAsync<TEntity>(TEntity entity, CancellationToken ct = default) where TEntity : class
     {
