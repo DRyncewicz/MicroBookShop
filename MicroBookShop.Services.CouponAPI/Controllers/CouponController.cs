@@ -9,10 +9,10 @@ public class CouponController(IMediator _mediator) : BaseController
 {
     private readonly IMediator _mediator = _mediator;
     [HttpPost]
-    public ActionResult<int> Create(CouponCreateCommand couponCreateCommand, CancellationToken cancellationToken)
+    public async Task<ActionResult<int>> Create(CouponCreateCommand couponCreateCommand, CancellationToken cancellationToken)
     {
-        var id = _mediator.Send(couponCreateCommand, cancellationToken);
+        await _mediator.Send(couponCreateCommand, cancellationToken);
 
-        return Created("", id);
+        return Created();
     }
 }
