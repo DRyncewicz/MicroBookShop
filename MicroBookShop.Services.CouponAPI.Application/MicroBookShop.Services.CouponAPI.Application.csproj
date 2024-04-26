@@ -20,8 +20,4 @@
     <ProjectReference Include="..\MicroBookShop.Services.CouponAPI.Domain\MicroBookShop.Services.CouponAPI.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Coupon\Queries\" />
-  </ItemGroup>
-
 </Project>

@@ -1,7 +1,7 @@
-﻿namespace MicroBookShop.Services.CouponAPI.Application.Dto;
+﻿namespace MicroBookShop.Web.Models;
 
 public class CouponDto
-{
+{ 
     public int Id { get; set; }
 
     public string CouponCode { get; set; }
