@@ -11,15 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{DBEE87F2-EA1B-4CE0-A76A-47EF78B5CF15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBookShop.Services.CouponAPI", "MicroBookShop.Services.CouponAPI\MicroBookShop.Services.CouponAPI.csproj", "{22A7164A-1A3F-4AAF-8D35-1D15AE05D14E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroBookShop.Services.CouponAPI", "MicroBookShop.Services.CouponAPI\MicroBookShop.Services.CouponAPI.csproj", "{22A7164A-1A3F-4AAF-8D35-1D15AE05D14E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CouponAPI", "CouponAPI", "{58CC7141-E4E3-45D5-8D4B-3E98F27802B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBookShop.Services.CouponAPI.Domain", "MicroBookShop.Services.CouponAPI.Domain\MicroBookShop.Services.CouponAPI.Domain.csproj", "{6D295742-1762-408C-9FFE-B7CA30D74E8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroBookShop.Services.CouponAPI.Domain", "MicroBookShop.Services.CouponAPI.Domain\MicroBookShop.Services.CouponAPI.Domain.csproj", "{6D295742-1762-408C-9FFE-B7CA30D74E8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBookShop.Services.CouponAPI.Application", "MicroBookShop.Services.CouponAPI.Application\MicroBookShop.Services.CouponAPI.Application.csproj", "{D72ACDBE-C644-447D-9ED1-1F308858078F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroBookShop.Services.CouponAPI.Application", "MicroBookShop.Services.CouponAPI.Application\MicroBookShop.Services.CouponAPI.Application.csproj", "{D72ACDBE-C644-447D-9ED1-1F308858078F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBookShop.Services.CouponAPI.Infrastructure", "MicroBookShop.Services.CouponAPI.Infrastructure\MicroBookShop.Services.CouponAPI.Infrastructure.csproj", "{33C613B4-939A-4649-8BDB-79C603CB9DA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroBookShop.Services.CouponAPI.Infrastructure", "MicroBookShop.Services.CouponAPI.Infrastructure\MicroBookShop.Services.CouponAPI.Infrastructure.csproj", "{33C613B4-939A-4649-8BDB-79C603CB9DA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroBookShop.Web", "MicroBookShop.Web\MicroBookShop.Web.csproj", "{3F1676B3-B34E-46D9-87A8-23615443DFBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{33C613B4-939A-4649-8BDB-79C603CB9DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33C613B4-939A-4649-8BDB-79C603CB9DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33C613B4-939A-4649-8BDB-79C603CB9DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1676B3-B34E-46D9-87A8-23615443DFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1676B3-B34E-46D9-87A8-23615443DFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1676B3-B34E-46D9-87A8-23615443DFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1676B3-B34E-46D9-87A8-23615443DFBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{6D295742-1762-408C-9FFE-B7CA30D74E8C} = {58CC7141-E4E3-45D5-8D4B-3E98F27802B7}
 		{D72ACDBE-C644-447D-9ED1-1F308858078F} = {58CC7141-E4E3-45D5-8D4B-3E98F27802B7}
 		{33C613B4-939A-4649-8BDB-79C603CB9DA4} = {58CC7141-E4E3-45D5-8D4B-3E98F27802B7}
+		{3F1676B3-B34E-46D9-87A8-23615443DFBE} = {64C48867-B938-4BF3-8744-B83E86EA4886}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B558E240-9F14-4B86-A4CF-0CE412427668}
